@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'FuturaLightC';
+    src: url('../fonts/FuturaLightC.eot');
+    src: url('../fonts/FuturaLightC.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaLightC.woff') format('woff'),
+        url('../fonts/FuturaLightC.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaBookC';
+    src: url('../fonts/FuturaBookC.eot');
+    src: url('../fonts/FuturaBookC.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaBookC.woff') format('woff'),
+        url('../fonts/FuturaBookC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaMediumC';
+    src: url('../fonts/FuturaMediumC.eot');
+    src: url('../fonts/FuturaMediumC.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaMediumC.woff') format('woff'),
+        url('../fonts/FuturaMediumC.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Futuris Bold';
+    src: url('../fonts/FuturaFuturisC-Bold.eot');
+    src: url('../fonts/FuturaFuturisC-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaFuturisC-Bold.woff') format('woff'),
+    url('../fonts/FuturaFuturisC-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$futura_light: FuturaLightC, Arial, sans-serif;
+$futura_regular: FuturaBookC, Arial, sans-serif;
+$futura_medium: FuturaMediumC, Arial, sans-serif;
+$futura_bold: 'Futura Futuris Bold', Arial, sans-serif;
