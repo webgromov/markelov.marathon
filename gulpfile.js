@@ -7,7 +7,8 @@ const {src, dest, series, parallel, watch, task} = require('gulp'),
 	 concat = 	require('gulp-concat'),
 	 uglify = 	require('gulp-uglify-es').default
 	 htmlmin = 	require('gulp-htmlmin'),
-	 imagemin = require('gulp-imagemin')
+	 imagemin = require('gulp-imagemin'),
+	 autoprefixer = require('gulp-autoprefixer');
 
 const absDirs = {
 	dev: path.relative(process.cwd(), path.join(__dirname, 'src')) + '/',
@@ -24,6 +25,7 @@ console.log(absDirs)*/
 task('styles', () => {
 	return src(globStyles, {sourcemaps: true})
 	.pipe(sass())
+	.pipe(autoprefixer({cascade: false}))
 	.pipe(cleanCSS({debug: true}, details => {
 		console.log(`${details.name}: ${details.stats.originalSize}`)
 		console.log(`${details.name}: ${details.stats.minifiedSize}`)
@@ -79,7 +81,7 @@ task('imagemin', done => {
 	//[jpg] ---to---> [jpg(jpegtran)]
 	return src(absDirs.dev + 'img/**/*.*').pipe(imagemin([
 		// imagemin.gifsicle({interlaced: true}),
-		imagemin.mozjpeg({quality: 40, progressive: true}),
+		imagemin.mozjpeg({quality: 30, progressive: true}),
 		imagemin.optipng({optimizationLevel: 6}),
 		imagemin.svgo({
 			plugins: [

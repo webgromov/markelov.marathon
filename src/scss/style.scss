@@ -5,7 +5,311 @@
 @import 'parts/mixins';
 @import 'parts/common';
 
+.header {
+    padding-top: 0;
+    padding-bottom: 30px;
+    &__cap {
+        padding-top: 40px;
+        &__logo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            img {
+                width: 90px;
+                border-right: 2px solid $gray;
+                padding-right: 10px;
+                margin-right: 10px;
+            }
+            &__desc {
+                max-width: 155px;
+                font-size: 12px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__main {
+        padding-top: 100px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        margin-bottom: 25px;
+        line-height: 130%;
+    }
+    &__desc {
+        font-size: 18px;
+        max-width: 420px;
+        margin-bottom: 40px;
+        line-height: 120%;
+    }
+    &__button {
+        &_wrap {
+            max-width: 290px;
+            width: 100%;
+        }
+        margin-bottom: 12px;
+        width: 100%;
+        position: relative;
+        .gift {
+            transition: .3s ease-out;
+            color: $orange-ease;
+            padding: 5px;
+            background: #fff;
+            border-radius: 5px;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 14px;
+            transform: translateY(-50%);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        }
+        &:hover .gift {
+            transform: translateY(-20%) scale(1.1);
+        }
+    }
+    &__small-text {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+    }
+    &__main-image {
+        width: 420px;
+        height: 480px;
+        position: relative;
+        top: -30px;
+    }
+}
+.promo-list {
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 65px;
+    }
+    &__number {
+        font-size: 50px;
+        font-weight: 900;
+        color: $orange-ease;
+        margin-top: -9px;
+        margin-bottom: -20px;
+        margin-right: 30px;
+        text-align: center;
+        display: block;
+        min-width: 30px;
 
-
+    }
+    &__text {
+        font-size: 17px;
+        line-height: 21.6px;
+        margin-bottom: 0;
+    }
+}
+.target-people {
+    &__list {
+        &__item {
+            margin-bottom: 60px;
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+        &__block {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__info-block {
+        line-height: 16.8px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+        min-height: 110px;
+        * {
+            display: inline;
+            font-size: 14px;
+        }
+    }
+    &__image {
+        border-radius: 5px 5px 0 0;
+    }
+    &__title {
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 0;
+    }
+}
+.author {
+    &__image {
+        width: 350px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    &__name {
+        font-size: 18px;
+        font-weight: bold;
+        color: $orange;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        &__item {
+            width: 48%;
+            min-width: 90px;
+        }
+    }
+}
+.marathon {
+    &__list {
+        font-size: 18px;
+        &__item {
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 15px 30px;
+            &:before {
+                content: attr(data-day);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $orange-ghost;
+                font-size: 144px;
+                font-weight: 900;
+            }
+            * {
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+    &__time-sign {
+        text-align: right;
+        color: $orange-special;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    &__schedule {
+        li {
+            display: flex;
+            margin-bottom: 22px;
+        }
+    }
+    &__time {
+        margin-right: 10px;
+        font-weight: bold;
+        min-width: 57px;
+    }
+    &__course-part {
+        font-size: 15px;
+        line-height: 120%;
+        margin-bottom: 0;     
+    }
+}
+.timer {
+    &__list {
+        &__item {
+            text-align: center;
+        }
+        &__count {
+            font-size: 144px;
+            font-weight: 900;
+            margin-bottom: 0;
+            color: $orange-ease;
+        }
+    }
+    &__gift {
+        margin-top: 130px;
+        &__text {
+            * {
+                font-size: 23px;
+            }
+        }
+        &__title {
+            font-weight: bold;
+            margin-bottom: 27px;
+        }
+    }
+}
+.tariffs {
+    &__list {
+        &__item {
+            padding: 30px 35px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+            .price {
+                color: #D0B18C;
+            }
+        }
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    &__desc {
+        font-size: 18px;
+        line-height: 21.6px;
+        margin-bottom: 0;
+        min-height: 140px;
+    }
+    &__button {
+        width: 100%;
+    }
+}
+.reviews {
+    &__person {
+        display: flex;
+        align-items: center;
+        margin-bottom: 22px;
+        &__avatar {
+            width: 80px;
+        }
+        &__name {
+            font-size: 18px;
+            margin-bottom: 2px;
+            font-weight: bold;
+            color: #C79C66;
+            line-height: 21.6px;
+        }
+        &__status {
+            font-size: 14px;
+            line-height: 16.8px;
+            margin-bottom: 0;
+        }
+    }
+    &__quote {
+        font-size: 18px;
+        line-height: 21.6px;
+        max-width: 530px;
+        margin: 0;
+        margin: 0 auto;
+    }
+}
+.conclusion {
+    &__header {
+        font-size: 28px;
+        line-height: 28.8px;
+        font-weight: bold;
+        margin-bottom: 23px;
+    }
+    &__instruction {
+        font-size: 18px;
+        line-height: 21.6px;
+        margin-bottom: 25px;
+    }
+    &__inp {
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    &__btn {
+        width: 100%;
+        &_subscribe {
+            @extend .conclusion__btn;
+            background: #4D65BA;
+        }
+    }
+    &__image {
+        height: 405px;
+        border-radius: 5px;
+    }
+}
 
 @import 'parts/mobile-width';

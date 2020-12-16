@@ -1,4 +1,5 @@
 body {
+	font-family: $font-standard;
 }
 
 a {
@@ -13,6 +14,7 @@ ul {
 }
 img, video {
 	max-width: 100%;
+	object-fit: cover;
 }
 section, footer {
 	padding: 45px 0;
@@ -22,25 +24,55 @@ section, footer {
 		opacity: 0;
 	}
 }
-.section {
+header, section, footer {
+	padding: 40px 0;
 }
-.inp {
-	padding: 15px 20px;
-	border-radius: 0;
-	border: 2px solid #bbc1da;
-	font-size: 26px;
-	&:focus {
-		outline: none;
+.section-title {
+	&__header {
+		text-align: center;
+		margin-bottom: 0;
+		font-size: 24px;
+		font-weight: bold;
 	}
+	margin-bottom: 50px;
 }
 .btn {
-	padding: 15px;
-	border-radius: 5px;
-	font-size: 21px;
-	&:focus {
-		box-shadow: none;
-	}
+	@include formElement();
+	background-color: $blue;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	font-size: 16px;
 	&:hover {
-		color: #fff!important;	
+		color: #fff;
+		background-color: lighten($blue, 15%);
 	}
+}
+.inp {
+	@include formElement();
+	border: 1px solid $blue;
+	font-size: 14px;
+}
+
+.promo-list {
+    &__item {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__number {
+        font-size: 50px;
+        font-weight: bold;
+        color: $orange-ease;
+        margin-top: -9px;
+        margin-bottom: -20px;
+        margin-right: 30px;
+        text-align: center;
+        display: block;
+        min-width: 30px;
+
+    }
+    &__text {
+        font-size: 18px;
+        line-height: 21.6px ;
+    }
 }
