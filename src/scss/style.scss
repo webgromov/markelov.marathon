@@ -5,6 +5,10 @@
 @import 'parts/mixins';
 @import 'parts/common';
 
+body {
+    // overflow: hidden;
+}
+
 .header {
     padding-top: 0;
     padding-bottom: 30px;
@@ -79,7 +83,7 @@
         top: -30px;
     }
 }
-.promo-list {
+.promo__list {
     &__item {
         display: flex;
         align-items: flex-start;
@@ -112,10 +116,12 @@
         }
         &__block {
             display: flex;
+            position: relative;
             flex-direction: column;
         }
     }
     &__info-block {
+        background-color: #fff;
         line-height: 16.8px;
         padding: 20px;
         border-radius: 5px;
@@ -161,6 +167,9 @@
     &__list {
         font-size: 18px;
         &__item {
+            background-color: #fff;
+            position: relative;
+            border-radius: 5px;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
             padding: 15px 30px;
             &:before {
@@ -216,6 +225,9 @@
     }
     &__gift {
         margin-top: 130px;
+        &__image {
+            border-radius: 5px;
+        }
         &__text {
             * {
                 font-size: 23px;
@@ -230,6 +242,8 @@
 .tariffs {
     &__list {
         &__item {
+            border-radius: 5px;
+            background-color: #fff;
             padding: 30px 35px;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
             .price {
@@ -255,6 +269,7 @@
     }
 }
 .reviews {
+    padding-bottom: 80px;
     &__person {
         display: flex;
         align-items: center;
@@ -284,6 +299,7 @@
     }
 }
 .conclusion {
+    padding: 80px 0;
     &__header {
         font-size: 28px;
         line-height: 28.8px;
@@ -309,6 +325,41 @@
     &__image {
         height: 405px;
         border-radius: 5px;
+    }
+}
+
+
+// Special styles
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    max-width: 100%;
+    display: none;
+    &#lines_header {
+        display: block;
+    }
+    &#lines_header2 {
+        width: 1600px;
+        left: auto;
+        top: -550px;
+        right: 0;
+    }
+    &#lines_target {
+        top: 110px;
+    }
+    &#lines_marathon {
+        top: -300px;
+    }
+    &#lines_gift {
+        top: -450px;
+    }
+    &#lines_reviews {
+        top: -650px;
+    }
+    &#lines_conclusion {
+        top: -670px;
     }
 }
 
