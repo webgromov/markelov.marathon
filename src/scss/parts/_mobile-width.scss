@@ -16,7 +16,7 @@
 
     .target-people {
         &__info-block {
-            min-height: 136px;
+            min-height: 140px;
         }
     }
     
@@ -37,7 +37,6 @@
     }
     .timer {
         &__list {
-            max-width: 400px;
             margin: 0 auto;
         }
     }
@@ -49,6 +48,9 @@
 }
 $cards_max_width: 500px;
 @media (max-width: 991px) {
+    .lines {
+        display: none!important;
+    }
     .marathon, .tariffs {
         &__list {
             max-width: $cards_max_width;
@@ -79,6 +81,7 @@ $cards_max_width: 500px;
             }
         }
         &__list {
+            max-width: $cards_max_width;
             &__count {
                 font-size: 75px;
             }
@@ -222,9 +225,72 @@ $cards_max_width: 500px;
     }
 }
 
-// @media (max-width: 500px) {
-	
-// }
+@media (max-width: 500px) {
+    .lines__wrap {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        // overflow-x: hidden;
+        width: 100%;
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+    .profit {
+        padding-bottom: 0;
+    }
+    .target-people {
+        padding-top: 40px;
+    }
+    .lines {
+        display: block!important;
+        max-width: none;
+        &__wrap {
+            width: 100%;
+            height: 100%;
+
+            overflow: hidden;
+        }
+        &#lines_header {
+            width: 700px;
+            left: -120px;
+            top: -90px;
+        }
+        &#lines_header2 {
+            display: none!important;
+        }
+        &#lines_whom {
+            top: -50px;
+            left: -130px;
+            width: 100%;
+        }
+        &#lines_reviews {
+            left: -300px;
+            top: -650px;
+            width: 900px;
+        }
+    }
+}
 // @media (max-width: 450px) {
 	
 // }
+
+@media (max-width: 320px) {
+    section {
+        // overflow: hidden;
+    }
+    .lines {
+        &#lines_whom {
+            left: 0;
+            top: -280px;
+            width: 100%;
+        }
+    }
+    .timer {
+        .lines__wrap {
+            display: none;
+        }
+    }
+}
