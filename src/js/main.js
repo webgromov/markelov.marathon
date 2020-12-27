@@ -10,13 +10,15 @@ window.addEventListener('load', () => {
     }
 
     // Highlight
-    const mobileWebkitHighlight = `* {-webkit-tap-highlight-color: none;}`
+    const mobileWebkitHighlight = `* {-webkit-tap-highlight-color: transparent;}`
     if(detectMob()) {
-        console.log('U r using mobile version')
+        console.log('You are using mobile version')
     }
 
 })
 
+
+// Functions Area
 function detectMob() {
     const toMatch = [
         /Android/i,
